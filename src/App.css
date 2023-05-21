@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+:root {
+  font-size: 16px;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: #2c2c31;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #9e9ea0;
+}
+@keyframes entering {
+  from {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: "Alkatra", cursive;
+  background: #111;
+  color: #bebebf;
+}
+.pai {
+  display: grid;
+  grid-template-areas: "profile timeline";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 98.5vh;
+}
+nav {
+  padding: 32px;
+  grid-area: timeline;
+  overflow-y: scroll;
+  animation: entering 0.7s ease-in-out;
+}
+aside {
+  grid-area: profile;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
+  border-right: 2px solid;
+  border-image: linear-gradient(#111, #e7e) 1;
+  background-image: url("../public/assets/background.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
 }
-
-.App-link {
-  color: #61dafb;
+aside * {
+  animation: entering 0.7s ease-in-out;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+aside img:nth-child(2) {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(#d39e33, #ed5636, #633bbc) padding-box,
+    linear-gradient(260deg, #111, #ed5636, #101) border-box;
+}
+aside img:nth-child(2):hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+aside p {
+  font-size: 2rem;
+  text-align: center;
+}
+aside span {
+  font-size: 0.75rem;
+  color: #9e9ea0;
+}
+.memory {
+  color: #bebebf;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-decoration: none;
+  margin-bottom: 32px;
+}
+.memory small {
+  font-size: 0.75rem;
+  color: #bebebf;
+}
+.memory h1 {
+  font-size: 2rem;
+}
+.memory img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+.memory div {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.memory:hover img {
+  transform: scale(1.1);
+}
+.memory p {
+  font-size: 1.2rem;
+  color: #bebebf;
+  line-height: 25px;
+}
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
   }
-  to {
-    transform: rotate(360deg);
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.8fr;
+    grid-template-areas:
+      "profile"
+      "timeline";
+  }
+  aside {
+    border-right: none;
+    padding: 32px 12px;
+  }
+  nav {
+    overflow-y: visible;
+    padding: 22px;
   }
 }

@@ -1,25 +1,75 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="pai">
+      <aside>
+        <img src="./assets/logo.svg" />
+        <img src="./assets/FotoMinha.jpg" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Cápsula do Tempo de <br />
+          <strong>Everton</strong>
         </p>
+        <span>Feito com 💜 no NLW da RocketSeat!</span>
+      </aside>
+      <nav>
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          href="https://www.youtube.com/watch?v=3nz5HkUJaVU"
           target="_blank"
-          rel="noopener noreferrer"
+          className="memory"
+          rel="noreferrer"
         >
-          Learn React
+          <small>20 de Março de 2023</small>
+          <h1>Jornada do Zero à Primeira Vaga</h1>
+          <div>
+            <img src="./assets/jornada.png" />
+          </div>
+          <p>
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti quos
+            dolores et quas molestias excepturi sint occaecati cupiditate non
+            provident, similique...
+          </p>
         </a>
-      </header>
+        <a
+          href="https://www.youtube.com/watch?v=3nz5HkUJaVU"
+          target="_blank"
+          className="memory"
+          rel="noreferrer"
+        >
+          <small>01 de Abril de 2023</small>
+          <h1>Gato de Óculos</h1>
+          <div>
+            <img src="./assets/imagem.jpg" />
+          </div>
+          <p>
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti quos
+            dolores et quas molestias excepturi sint occaecati cupiditate non
+            provident, similique...
+          </p>
+        </a>
+        <a
+          href="https://www.youtube.com/watch?v=3nz5HkUJaVU"
+          target="_blank"
+          className="memory"
+          rel="noreferrer"
+        >
+          <small>01 de Abril de 2023</small>
+          <h1>Cachorro Ouvindo Música</h1>
+          <div>
+            <img src="./assets/CachorroDeFonejpg.jpg" />
+          </div>
+          <p>
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti quos
+            dolores et quas molestias excepturi sint occaecati cupiditate non
+            provident, similique...
+          </p>
+        </a>
+      </nav>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
